@@ -609,11 +609,11 @@ BOOL Measure::CreateShape(ImgType shapeType, std::shared_ptr<ImgContainer> out)
                     out->geometry.yOff() - (ssize_t)ceil(strokeWidth)
                 };
 
-				out->img.composite(temp, 0, 0, Magick::OverCompositeOp);
+				out->img.composite(temp, 0, 0, Magick::OverComposite);
 			}
             else if (strokeAlign == StrokeAlign::INSIDE)
             {
-				out->img.composite(temp, 0, 0, Magick::CopyAlphaCompositeOp);
+				out->img.composite(temp, 0, 0, Magick::CopyAlphaComposite);
 			}
 		}
         // Center stroke

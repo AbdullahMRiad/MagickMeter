@@ -507,7 +507,7 @@ BOOL Measure::CreateText(std::shared_ptr<ImgContainer> out)
             tempImg,
             out->geometry.xOff(),
             out->geometry.yOff(),
-            Magick::OverCompositeOp
+            Magick::OverComposite
         );
 	}
 	catch (Magick::Exception &error_)

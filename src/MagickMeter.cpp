@@ -326,7 +326,7 @@ void Measure::Compose()
     for (auto &img: imgList)
     {
         if (img->isCombined || img->isIgnored) continue;
-        finalImg.composite(img->img, 0, 0, MagickCore::OverCompositeOp);
+        finalImg.composite(img->img, 0, 0, Magick::OverComposite);
     }
 
     if (finalImg.isValid())
